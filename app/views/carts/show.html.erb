@@ -55,7 +55,9 @@
 
   <% else %>
   <header class="page-header">
-    <h4>Your cart is empty! Please <%= link_to 'add things!', root_path %>
+    <div class="alert alert-warning">
+      <h4>Your cart is empty! Please <%= link_to 'add things!', root_path %></h4>
+    </div>
   </header>
   <% end %>
 </section>
