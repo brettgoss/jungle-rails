@@ -10,13 +10,14 @@ Rails.application.routes.draw do
     delete :remove_item
   end
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 
-  resource :users, only: [:index, :new, :create, :show] do
-    get :index
-  end
+  get '/users', to: 'users#index'
+  get '/register', to: 'users#new'
+  post '/users', to: 'users#create'
+
 
   resources :orders, only: [:create, :show]
 
