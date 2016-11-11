@@ -1,0 +1,15 @@
+Thank you for your order, <%= @user.first_name %>
++==========================================+
+
+You have successfully placed an order on Jungle!
+<% @order.line_items.each do |i|  %>
+  <%= i.quantity %>  <%= i.product.name %> - <%= i.total_price_cents %>
+<% end %>
+
+Total Items: <%= @order.line_items.count %>
+Total Sale: <%= @order.total_cents %>
+
++===========================================+
+To view your order details, just follow this link: <%= @url %>.
+
+Thanks for your purchase and have a great day!
