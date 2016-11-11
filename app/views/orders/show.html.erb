@@ -1,13 +1,14 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h2>Order #<%= @order.id %></h2>
   </header>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <%= render @order %>
+    <h4 class="well">Your total is: <%= @order.total %></h4>
+    <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
   </div>
-
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
+  
 </section>
