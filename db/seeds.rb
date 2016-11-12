@@ -129,5 +129,21 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
+puts "Re-creating Users..."
+
+User.create!({
+  first_name: "Brett",
+  last_name: "Goss",
+  password: "pass",
+  email: "brett@example.com"
+})
+
+User.create!({
+  first_name: "John",
+  last_name: "Smith",
+  password: "pass",
+  email: "johnsmith@example.com"
+})
 
 puts "DONE!"
