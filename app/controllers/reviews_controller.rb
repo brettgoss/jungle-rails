@@ -7,6 +7,10 @@ class ReviewsController < ApplicationController
     @review.user_id = current_user.id
     if @review.save
       redirect_to @product
+    else
+
+      flash[:error] = @review.errors.full_messages[0]
+      redirect_to @product
     end
 
   end
