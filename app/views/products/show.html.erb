@@ -49,10 +49,17 @@
             <h4>Product Reviews:</h4>
             <% @product.reviews.reverse_each do |review| %>
 
-              <div class="well">
-                <h4><%= review.user.first_name %></h4>
-                <div><%= review.rating %>/5</div>
-                <div><%= review.description %></div>
+              <div class="review">
+                <div class="author"><%= review.user.first_name %></div>
+                <div class="date"><%= review.created_at.strftime("%B %d, %Y") %></div>
+                <div class="rating">
+                  <% review.rating.to_i.times do |i| %>
+                    <div class="stars glyphicon glyphicon-star-empty"></div>
+                  <% end %>
+                </div>
+                <% if review.description.length > 1 %>
+                  <div class="description well"><%= review.description %></div>
+                <% end %>
               </div>
 
             <% end %>
