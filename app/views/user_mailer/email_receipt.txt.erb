@@ -7,7 +7,7 @@ You have successfully placed an order on Jungle!
 <% end %>
 
 Total Items: <%= @order.line_items.count %>
-Total Sale: <%= @order.total_cents %>
+Total Sale: <%= @number_to_currency(@order.total) %>
 
 +===========================================+
 To view your order details, just follow this link: <%= @url %>.

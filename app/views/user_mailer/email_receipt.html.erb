@@ -9,10 +9,10 @@
       You have successfully placed an order on Jungle!
     </p>
     <% @order.line_items.each do |i|  %>
-     <h2> <%= i.quantity %>  <%= i.product.name %> - <%= i.total_price_cents %></h2>
+     <h2> <%= i.quantity %>  <%= i.product.name %> - <%= number_to_currency(i.total_price) %></h2>
     <% end%>
     <h4>Total Items: <%= @order.line_items.count %> </h4>
-    <h4>Total Sale: <%= @order.total_cents %></h4>
+    <h4>Total Sale: <%= number_to_currency(@order.total) %></h4>
     <p>
       To view your order details, just follow this link: <%= @url %>.
     </p>
