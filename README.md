@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/brettgoss/jungle-rails.svg?branch=testing%2Frspec)](https://travis-ci.org/brettgoss/jungle-rails)
+[![Build Status](https://travis-ci.org/brettgoss/jungle-rails.svg?branch=master)](https://travis-ci.org/brettgoss/jungle-rails)
 
 # Jungle
 
