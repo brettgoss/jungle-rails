@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brettgoss/jungle-rails.svg?branch=testing%2Frspec)](https://travis-ci.org/brettgoss/jungle-rails)
+
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
