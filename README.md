@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/brettgoss/jungle-rails.svg?branch=master)](https://travis-ci.org/brettgoss/jungle-rails)
 
-# Jungle
+# [Jungle](https://fast-citadel-60478.herokuapp.com)
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
