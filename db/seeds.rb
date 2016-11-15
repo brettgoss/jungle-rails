@@ -142,6 +142,7 @@ User.create!({
   first_name: "Brett",
   last_name: "Goss",
   password: "pass",
+  password_confirmation: "pass",
   email: "brett@example.com"
 })
 
@@ -149,6 +150,7 @@ User.create!({
   first_name: "John",
   last_name: "Smith",
   password: "pass",
+  password_confirmation: "pass",
   email: "johnsmith@example.com"
 })
 
