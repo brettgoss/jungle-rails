@@ -77,5 +77,37 @@ RSpec.describe User, type: :model do
       expect(@user.save).to be false
       expect(@user.errors.full_messages).to include "Password confirmation doesn't match Password"
     end
+
+    it 'should be false if email exists' do
+      @user1 = User.new({
+        first_name: 'Brett',
+        last_name: 'Goss',
+        email: 'brett@example.com',
+        password: 'pass',
+        password_confirmation: 'pass'
+      })
+      @user2 = User.new({
+        first_name: 'NotBrett',
+        last_name: 'NotGoss',
+        email: 'BRETT@example.com',
+        password: 'pass',
+        password_confirmation: 'pass'
+      })
+      expect(@user1.save).to be true
+      expect(@user2.save).to be false
+      expect(@user2.errors.full_messages).to include "Email has already been taken"
+    end
+
+    it 'should be false if password is too short' do
+      @user = User.new({
+        first_name: 'Brett',
+        last_name: 'Goss',
+        email: 'brett@example.com',
+        password: 'p',
+        password_confirmation: 'p'
+      })
+      expect(@user.save).to be false
+      expect(@user.errors.full_messages).to include "Password is too short (minimum is 2 characters)"
+    end
   end
 end
