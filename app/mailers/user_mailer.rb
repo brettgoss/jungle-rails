@@ -1,4 +1,4 @@
-require 'net'
+require 'net/smtp'
 class UserMailer < ApplicationMailer
   default from: 'no-reply@fast-citadel-60478.herokuapp.com'
 
@@ -9,6 +9,7 @@ class UserMailer < ApplicationMailer
       mail(to: order.email, subject: "Order confirmation for order ##{@order.id}")
     rescue Net::SMTPFatalError
       puts "User email isn't verified by MailGun"
+      redirect_to @order
     rescue
       puts "There was an error."
     end
