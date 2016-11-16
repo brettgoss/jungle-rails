@@ -1,4 +1,4 @@
-require 'net'
+require 'net/smtp'
 class UserMailer < ApplicationMailer
   default from: 'no-reply@fast-citadel-60478.herokuapp.com'
 
